@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$GLIE — The Greatest Lie Ever Told</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: white;
+      color: #000;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to right, #001aff, #008cff);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 4rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .button {
+      background: #001aff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      margin: 1rem 0.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .tokenomics, .roadmap {
+      background: #f0f4ff;
+      border-radius: 20px;
+      padding: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #001aff;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>$GLIE — The Greatest Lie Ever Told</h1>
+    <p>You believed the system. That was the lie.<br>Now believe in memes. Now believe in $GLIE.</p>
+    <a href="https://x.com/gliebased" class="button">Follow on Twitter</a>
+    <a href="https://dexscreener.com/base/0x657E4B26551aB2aDAa55A893D24F8aD606Ab7D8b" class="button">View on Dexscreener</a>
+  </header>
+
+  <section id="about">
+    <h2>What is $GLIE?</h2>
+    <p>
+      Born from a single tweet, $GLIE turns deception into value. It’s more than a meme—it's a reflection of what we all secretly know: the truth doesn’t matter when the hype is this good.
+    </p>
+    <p>
+      Early market cap? Just $10,000. Entry point is now. Or you'll watch it go where most lies go—straight to the moon.
+    </p>
+  </section>
+
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li><strong>Total Supply:</strong> 1,000,000,000 $GLIE</li>
+      <li><strong>Liquidity Burned:</strong> ✅</li>
+      <li><strong>Contract Renounced:</strong> ✅</li>
+      <li><strong>Tax:</strong> 0/0 Forever</li>
+      <li><strong>Chain:</strong> Base</li>
+    </ul>
+  </section>
+
+  <section class="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>✅ Launch on Cliza Bot</li>
+      <li>✅ Twitter/X profile live</li>
+      <li>🔜 Meme takeover (GLIE memes flood your timeline)</li>
+      <li>🔜 Community raids & Twitter spaces</li>
+      <li>🔜 Get featured on meme token trackers</li>
+      <li>🔜 Keep lying — grow naturally through chaos</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>$GLIE — It's not a scam. It's just the greatest lie ever told.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
