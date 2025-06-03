@@ -91,11 +91,20 @@
     <ul>
       <li><strong>Name : The Greatest Lie Ever Told</strong></li>
       <li><strong>Ticker : $GLIE</strong><li>
-    <div class="copy-box">
-      <span id="ca-text">0x657E4B26551aB2aDAa55A893D24F8aD606Ab7D8b</span>
-      <button onclick="copyCA()">Copy</button>
-    </div>
-      <li><strong>CA : 0x657E4B26551aB2aDAa55A893D24F8aD606Ab7D8b</strong><li>
+        <div class="text-center">
+  <h2 class="text-xl font-semibold mb-2">Contract Address</h2>
+  <div class="flex items-center justify-center space-x-2">
+    <span id="shortCA" class="font-mono text-base bg-white text-black px-3 py-1 rounded">
+      0x657E...D8b
+    </span>
+    <button 
+      onclick="copyFullCA()" 
+      class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm transition-all"
+    >
+      Copy
+    </button>
+  </div>
+        </div>
       <li><strong>Total Supply:</strong> 1,000,000,000 $GLIE</li>
       <li><strong>Liquidity Burned:</strong> ✅</li>
       <li><strong>Contract Renounced:</strong> ✅</li>
@@ -119,6 +128,15 @@
   <footer>
     <p>$GLIE — It's not a scam. It's just the greatest lie ever told.</p>
   </footer>
+
+  <script>
+  function copyFullCA() {
+    const fullCA = "0x657E4B26551aB2aDAa55A893D24F8aD606Ab7D8b";
+    navigator.clipboard.writeText(fullCA).then(() => {
+      alert("Contract Address copied!");
+    });
+  }
+  </script>
 
   <script>
     const sections = document.querySelectorAll('section');
